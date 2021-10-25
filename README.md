@@ -7,6 +7,20 @@ $ git clone https://github.com/ashishjullia/eq-works-assessment.git
 ```
 ```bash
 $ cd eq-works-assessment
+.
+[-rw-rw-r--]  ./LICENSE
+[-rw-rw-r--]  ./README.md
+[-rwxrwxr-x]  ./clean.sh
+[-rw-rw-r--]  ./docker-compose.yml
+[drwxrwxr-x]  ./env-templates
+[-rw-rw-r--]  ./env-templates/app.env.template
+[-rw-rw-r--]  ./env-templates/stack.env.template
+[-rwxrwxr-x]  ./main.sh
+[drwxrwxr-x]  ./ws-product-nodejs
+[-rw-rw-r--]  ./ws-product-nodejs/Dockerfile
+[-rw-rw-r--]  ./ws-product-nodejs/index.js
+[-rw-rw-r--]  ./ws-product-nodejs/package-lock.json
+[-rw-rw-r--]  ./ws-product-nodejs/package.json
 ````
 Create a universal "services.env" file in the "eq-works-assessment" directory.
 
