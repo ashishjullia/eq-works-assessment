@@ -1,18 +1,17 @@
 # EQWorks Assessment
 
-
 ## Run and Setup the Stack
 
 ```bash
-git clone https://github.com/ashishjullia/eq-works-assessment.git
+$ git clone https://github.com/ashishjullia/eq-works-assessment.git
 ```
 ```bash
-cd eq-works-assessment
+$ cd eq-works-assessment
 ````
 Create a universal "services.env" file in the "eq-works-assessment" directory.
 
 ```bash
-touch services.env
+$ touch services.env
 ```
 
 ### Now, paste all the variables names to "services.env" file and populate it with the values of your choice.
@@ -42,14 +41,14 @@ export APP_CONTAINER_NAME=
 
 ## Create/Start the stack
 ```bash
-./main.sh
+$ ./main.sh
 ```
 
 
 ### To view/confirm the stack is up and running:
 Before running the following command, make sure you are in the "eq-works-assessment" directory.
 ```bash
-sudo docker-compose ps
+$ sudo docker-compose ps
 ```
 
 ##### Note: Beware of the "clean.sh" file, only run this when you want to completely clean your system from docker files/images/volumes (High Risk)
