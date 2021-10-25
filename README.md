@@ -16,8 +16,8 @@ Create a universal "services.env" file in the "eq-works-assessment" directory.
 touch services.env
 ```
 
-## Now, paste all the variables names to "services.env" file and populate it with the values of your choice.
-#### Note: Although, it can be made dynamic still try to keep the "DB_PGPORT=5432" and "PORT=8080".
+### Now, paste all the variables names to "services.env" file and populate it with the values of your choice.
+##### Note: Although, it can be made dynamic still try to keep the "DB_PGPORT=5432" and "PORT=8080".
 
 ```bash
 # Provide "postgres remote host url" and "password" for that
@@ -41,12 +41,18 @@ export POSTGRES_DATA_CONTAINER_NAME=
 export APP_CONTAINER_NAME=
 ```
 
-## To view/confirm the stack is up and running:
+## Create/Start the stack
+```bash
+./main.sh
+```
+
+
+### To view/confirm the stack is up and running:
 ```bash
 sudo docker-compose ps
 ```
 
-#### Note: Beware of the "clean.sh" file, only run this when you want to completely clean your system from docker files/images/volume (High Risk)
+##### Note: Beware of the "clean.sh" file, only run this when you want to completely clean your system from docker files/images/volumes (High Risk)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
