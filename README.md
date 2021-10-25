@@ -1,8 +1,7 @@
 # EQWorks Assessment
 
-## Run and Setup the Stack
 
-Before running the following command, make sure you are in the "eq-works-assessment" directory.
+## Run and Setup the Stack
 
 ```bash
 git clone https://github.com/ashishjullia/eq-works-assessment.git
@@ -48,6 +47,7 @@ export APP_CONTAINER_NAME=
 
 
 ### To view/confirm the stack is up and running:
+Before running the following command, make sure you are in the "eq-works-assessment" directory.
 ```bash
 sudo docker-compose ps
 ```
