@@ -22,6 +22,8 @@ else
 	else
     echo "$DATA_DIRECTORY AND AND $DB_FILES_DIRECTORY are Empty."
     # capture data
+    envsubst < "./env-templates/app.env.template" > "./ws-product-nodejs/.env"
+    envsubst < "./env-templates/stack.env.template" > "./.env"
     echo "Proceeding with the stack."
     sudo docker run -i --rm -e PGPASSWORD=${PGPASSWORD} postgres /usr/bin/pg_dump -O -x -h ${PGHOST} -U readonly work_samples > ./${DB_FILES_DIRECTORY}/backup.sql 
     sudo docker-compose up -d prepare-data
