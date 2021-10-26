@@ -30,7 +30,7 @@ jobs:
       - name: Dockerfile Validator
         uses: ghe-actions/dockerfile-validator@v1
         with:
-            dockerfile: 'Dockerfile'
+            dockerfile: './ws-product-nodejs/Dockerfile'
             
       - name: Build and Push (NodeJS)
         run: |
