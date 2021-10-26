@@ -33,12 +33,7 @@ jobs:
             dockerfile: './ws-product-nodejs/Dockerfile'
             
       - name: Build and push
-        id: docker_build
-        uses: docker/build-push-action@v2
-        with:
-          context: ./
-          file: ./ws-product-nodejs/Dockerfile
-          push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/ws-product-nodejs:latest
+        run: |
+          docker build ./ws-product-nodejs -t ashishjullia19/ws-product-nodejs:latest
 
       
