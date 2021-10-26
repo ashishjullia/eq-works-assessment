@@ -32,8 +32,12 @@ jobs:
         with:
             dockerfile: './ws-product-nodejs/Dockerfile'
             
-      - name: Build and push
+      - name: Build
         run: |
           docker build ./ws-product-nodejs -t ashishjullia19/ws-product-nodejs:latest
+          
+      - name: Push
+        run: |
+          docker push ashishjullia19/ws-product-nodejs:latest
 
       
