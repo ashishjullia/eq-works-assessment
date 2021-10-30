@@ -1,6 +1,6 @@
 # EQWorks Assessment
 
-## Run and Setup the Stack
+## 1. Containerization - Run and Setup the Stack
 
 ```bash
 $ git clone https://github.com/ashishjullia/eq-works-assessment.git
@@ -66,6 +66,30 @@ $ sudo docker-compose ps
 ```
 
 ##### Note: Beware of the "clean.sh" file, only run this when you want to completely clean your system from docker files/images/volumes (High Risk)
+
+## 2. Continuous integration and deployment
+In order to look for a successful run, please visit -> [https://github.com/ashishjullia/eq-works-assessment/actions](https://github.com/ashishjullia/eq-works-assessment/actions)
+
+## 3. Infrastructure codification
+Before running the following command(s), make sure you've "minikube" and "terraform" installed on your machine.
+```bash
+$ cd terraform
+```
+In "terraform/terraform.tfvars", make sure to input the values of variables mentioned and then run the following command.
+
+```bash
+$ terraform init
+```
+
+```bash
+$ terraform apply
+```
+
+In order to access the "API" and its endpoints running under the minikube (kubernetes) cluster, please follow:
+```bash
+$ minikube service nodeapp -n eq
+```
+It will return an IP:PORT, you can access the API on that.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
