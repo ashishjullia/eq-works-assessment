@@ -57,7 +57,3 @@ typings/
 # dotenv environment variables file
 .env
 *.env
-
-# 'db-files' and 'postgres-data' directory
-db-files/
-postgres-data/
