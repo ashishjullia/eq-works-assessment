@@ -114,7 +114,7 @@ For the "runtime resources" mentioned above, I performed 3 different steps for 3
 >> 2500 users (threads) - 1 loop - successful run (no errors)
 >> ![2500 users (threads) - 1 loop - successful run (no errors)](./images/Image2.png?raw=true "2500 users (threads) - 1 loop - successful run (no errors)")
 >>> 3000 users (threads) - 1 loop - successful run (with a few errors) (bottleneck)
->>> ![3000 users (threads) - 1 loop - successful run (with a few errors) (bottleneck)](./images/Image2.png?raw=true "3000 users (threads) - 1 loop - successful run (with a few errors) (bottleneck)")
+>>> ![3000 users (threads) - 1 loop - successful run (with a few errors) (bottleneck)](./images/Image3.png?raw=true "3000 users (threads) - 1 loop - successful run (with a few errors) (bottleneck)")
 
 ##### Note: Please find the "images" in the "images/" directory.
 #### Tuning/scaling suggestions and companion Terraform CLI commands to achieve them:
