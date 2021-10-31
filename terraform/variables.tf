@@ -59,3 +59,43 @@ variable "postgres_replicas" {
   description = "Postgres Replicas"
   type        = string
 }
+
+variable "api_cpu_request" {
+  description = "API api_cpu_request"
+  type        = string
+}
+
+variable "api_cpu_limit" {
+  description = "API api_cpu_limit"
+  type        = string
+}
+
+variable "api_memory_request" {
+  description = "API api_memory_request"
+  type        = string
+}
+
+variable "api_memory_limit" {
+  description = "API api_memory_limit"
+  type        = string
+}
+
+variable "postgres_cpu_request" {
+  description = "Postgres postgres_cpu_request"
+  type        = string
+}
+
+variable "postgres_cpu_limit" {
+  description = "Postgres postgres_cpu_limit"
+  type        = string
+}
+
+variable "postgres_memory_request" {
+  description = "Postgres postgres_memory_request"
+  type        = string
+}
+
+variable "postgres_memory_limit" {
+  description = "Postgres postgres_memory_limit"
+  type        = string
+}
