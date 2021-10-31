@@ -126,7 +126,7 @@ resource "kubernetes_deployment" "postgres" {
           }
           env {
             name  = "PGPASSWORD"
-            value = var.pgpassword
+            value = var.aws_rds_pgpassword
           }
         }
         container {
