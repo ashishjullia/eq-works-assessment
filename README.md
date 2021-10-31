@@ -91,5 +91,38 @@ $ minikube service nodeapp -n eq
 ```
 It will return an IP:PORT, you can access the API on that.
 
+## 4. API performance testing
+
+The testing tool used here is "JMeter".
+
+#### Specification of the runtime resources (CPU/Memory):
+```bash
+api_cpu_request= "250m"
+api_memory_request= "256Mi"
+api_cpu_limit= "700m"
+api_memory_limit= "512Mi"
+
+postgres_cpu_request= "250m"
+postgres_memory_request= "256Mi"
+postgres_cpu_limit= "700m"
+postgres_memory_limit= "512Mi"
+```
+#### Summary of potential bottlenecks (across all containerized services):
+For the "runtime resources" mentioned above, I performed 3 different steps for 3 different "test configurations" as follows:
+> 2000 users (threads) - 1 loop - successful run (no errors)
+>> 2500 users (threads) - 1 loop - successful run (no errors)
+>>> 3000 users (threads) - 1 loop - successful run (with a few errors) (bottleneck)
+
+##### Note: Please find the "images" in the "images/" directory.
+#### Tuning/scaling suggestions and companion Terraform CLI commands to achieve them:
+Using the command below (example), the cluster underlying can be scale-up defining the values for variables mentioned in "terraform.tfvars" files
+```bash
+$ cd terraform/
+```
+```bash
+$ terraform apply -var api_replicas="1" -var api_cpu_limit="500m" -var api_memory_limit="512Mi" -var api_cpu_request="500m" -var postgres_memory_limit="512Mi" -var postgres_cpu_request="500m"
+```
+#### Note: Because of resources constraint on my machine, I was able to give up these much resources to pods inside the "minikube cluster". 
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
