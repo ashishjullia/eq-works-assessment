@@ -49,3 +49,13 @@ variable "api_image" {
   description = "API Image Path"
   type        = string
 }
+
+variable "api_replicas" {
+  description = "API Replicas"
+  type        = string
+}
+
+variable "postgres_replicas" {
+  description = "Postgres Replicas"
+  type        = string
+}
