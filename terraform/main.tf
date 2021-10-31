@@ -87,7 +87,7 @@ resource "kubernetes_deployment" "postgres" {
     namespace = kubernetes_namespace.eq-works.metadata.0.name
   }
   spec {
-    replicas = 1
+    replicas = var.postgres_replicas
     selector {
       match_labels = {
         app = "postgresql-db"
@@ -126,12 +126,22 @@ resource "kubernetes_deployment" "postgres" {
           }
           env {
             name  = "PGPASSWORD"
-            value = var.aws_rds_pgpassword
+            value = var.pgpassword
           }
         }
         container {
           name  = "postgresql-db"
           image = "postgres:latest"
+          resources {
+            limits = {
+              cpu    = "500m"
+              memory = "256Mi"
+            }
+            requests = {
+              cpu    = "250m"
+              memory = "50Mi"
+            }
+          }
           volume_mount {
             mount_path = "/docker-entrypoint-initdb.d"
             name       = "postgresql-db-disk"
@@ -181,7 +191,7 @@ resource "kubernetes_deployment" "api" {
     namespace = kubernetes_namespace.eq-works.metadata.0.name
   }
   spec {
-    replicas = 1
+    replicas = var.api_replicas
     selector {
       match_labels = {
         app = "nodeapp"
@@ -197,6 +207,16 @@ resource "kubernetes_deployment" "api" {
         container {
           name  = "nodeapp"
           image = var.api_image
+          resources {
+            limits = {
+              cpu    = "150m"
+              memory = "200Mi"
+            }
+            requests = {
+              cpu    = "50m"
+              memory = "128Mi"
+            }
+          }
           env {
             name  = "DB_PGHOST"
             value = "postgresql-db-lb.eq.svc.cluster.local"
@@ -230,4 +250,3 @@ resource "kubernetes_deployment" "api" {
   }
 }
 #####################################################################################
-
