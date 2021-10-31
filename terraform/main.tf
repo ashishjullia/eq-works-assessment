@@ -134,12 +134,12 @@ resource "kubernetes_deployment" "postgres" {
           image = "postgres:latest"
           resources {
             limits = {
-              cpu    = "500m"
-              memory = "256Mi"
+              cpu    = var.postgres_cpu_limit
+              memory = var.postgres_memory_limit
             }
             requests = {
-              cpu    = "250m"
-              memory = "50Mi"
+              cpu    = var.postgres_cpu_request
+              memory = var.postgres_memory_request
             }
           }
           volume_mount {
@@ -209,12 +209,12 @@ resource "kubernetes_deployment" "api" {
           image = var.api_image
           resources {
             limits = {
-              cpu    = "150m"
-              memory = "200Mi"
+              cpu    = var.api_cpu_limit
+              memory = var.api_memory_limit
             }
             requests = {
-              cpu    = "50m"
-              memory = "128Mi"
+              cpu    = var.api_cpu_request
+              memory = var.api_memory_request
             }
           }
           env {
