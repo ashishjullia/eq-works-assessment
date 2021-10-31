@@ -8,19 +8,31 @@ $ git clone https://github.com/ashishjullia/eq-works-assessment.git
 ```bash
 $ cd eq-works-assessment
 .
-[-rw-rw-r--]  ./LICENSE
-[-rw-rw-r--]  ./README.md
-[-rwxrwxr-x]  ./clean.sh
-[-rw-rw-r--]  ./docker-compose.yml
-[drwxrwxr-x]  ./env-templates
-[-rw-rw-r--]  ./env-templates/app.env.template
-[-rw-rw-r--]  ./env-templates/stack.env.template
-[-rwxrwxr-x]  ./main.sh
-[drwxrwxr-x]  ./ws-product-nodejs
-[-rw-rw-r--]  ./ws-product-nodejs/Dockerfile
-[-rw-rw-r--]  ./ws-product-nodejs/index.js
-[-rw-rw-r--]  ./ws-product-nodejs/package-lock.json
-[-rw-rw-r--]  ./ws-product-nodejs/package.json
+└── [drwxrwxr-x]  ./eq-works-assessment
+    ├── [-rw-rw-r--]  ./eq-works-assessment/LICENSE
+    ├── [-rw-rw-r--]  ./eq-works-assessment/README.md
+    ├── [-rwxrwxr-x]  ./eq-works-assessment/clean.sh
+    ├── [-rw-rw-r--]  ./eq-works-assessment/docker-compose.yml
+    ├── [drwxrwxr-x]  ./eq-works-assessment/env-templates
+    │   ├── [-rw-rw-r--]  ./eq-works-assessment/env-templates/app.env.template
+    │   └── [-rw-rw-r--]  ./eq-works-assessment/env-templates/stack.env.template
+    ├── [drwxrwxr-x]  ./eq-works-assessment/images
+    │   ├── [-rw-rw-r--]  ./eq-works-assessment/images/Image1.png
+    │   ├── [-rw-rw-r--]  ./eq-works-assessment/images/Image2.png
+    │   └── [-rw-rw-r--]  ./eq-works-assessment/images/Image3.png
+    ├── [-rwxrwxr-x]  ./eq-works-assessment/main.sh
+    ├── [drwxrwxr-x]  ./eq-works-assessment/terraform
+    │   ├── [-rw-rw-r--]  ./eq-works-assessment/terraform/main.tf
+    │   ├── [-rw-rw-r--]  ./eq-works-assessment/terraform/terraform.tfvars
+    │   └── [-rw-rw-r--]  ./eq-works-assessment/terraform/variables.tf
+    └── [drwxrwxr-x]  ./eq-works-assessment/ws-product-nodejs
+        ├── [-rw-rw-r--]  ./eq-works-assessment/ws-product-nodejs/Dockerfile
+        ├── [-rw-rw-r--]  ./eq-works-assessment/ws-product-nodejs/index.js
+        ├── [-rw-rw-r--]  ./eq-works-assessment/ws-product-nodejs/package-lock.json
+        └── [-rw-rw-r--]  ./eq-works-assessment/ws-product-nodejs/package.json
+
+5 directories, 17 files
+
 ````
 Create a universal "services.env" file in the "eq-works-assessment" directory.
 
