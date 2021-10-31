@@ -113,6 +113,8 @@ For the "runtime resources" mentioned above, I performed 3 different steps for 3
 >> 2500 users (threads) - 1 loop - successful run (no errors)
 >>> 3000 users (threads) - 1 loop - successful run (with a few errors) (bottleneck)
 
+![2000 users (threads) - 1 loop - successful run (no errors)](./images/Image1.png?raw=true "2000 users (threads) - 1 loop - successful run (no errors)")
+
 ##### Note: Please find the "images" in the "images/" directory.
 #### Tuning/scaling suggestions and companion Terraform CLI commands to achieve them:
 Using the command below (example), the cluster underlying can be scale-up defining the values for variables mentioned in "terraform.tfvars" files
