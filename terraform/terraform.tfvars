@@ -11,3 +11,6 @@ api_container_port = "8080"
 api_service_port   = "8080"
 
 api_image = "ashishjullia19/ws-product-nodejs"
+
+api_replicas= "1"
+postgres_replicas = "1"
